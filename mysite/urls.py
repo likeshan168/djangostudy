@@ -3,13 +3,14 @@ from django.conf.urls import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
-from mysite.views import hello, current_datetime, my_homepage_view, hours_ahead
+from mysite.views import hello, current_datetime, my_homepage_view, hours_ahead,mypage
 
 urlpatterns = patterns('',
 	url(r'^$', my_homepage_view),
 	url(r'^hello/$', hello),	
 	url(r'^time/$', current_datetime),
-	url(r'^time/plus/(\d{1,2})/$', hours_ahead)
+	url(r'^time/plus/(\d{1,2})/$', hours_ahead),
+	url(r'^mypage/$', mypage),
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^mysite/', include('mysite.foo.urls')),
