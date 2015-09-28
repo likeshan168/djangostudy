@@ -29,3 +29,13 @@ def sherman(request):
 	return "hello shermanli"
 def mypage(request):
 	return render_to_response('mypage.html',{'title':'shermamli', 'current_section':'nav section'})
+def display_meta(request):
+	values = request.META.items()
+	values.sort()
+#	html=[]
+#	for k, v in values:
+#		html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, v))
+#	return HttpResponse('<table>%s</table>' % '\n'.join(html))
+	return render_to_response('display_meta.html', {'metas':values})
+def search_form(request):
+	return render_to_response('search_form.html')

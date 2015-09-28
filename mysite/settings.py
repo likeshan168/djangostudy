@@ -93,6 +93,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+	'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -159,3 +160,9 @@ LOGGING = {
         },
     }
 }
+
+EMAIL_HOST = 'smtp.sina.com.cn'
+EMAIL_HOST_USER = 'likeshan168@sina.com'
+MEAIL_HOST_PASSWORD = 'likeshannihao168'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 25
